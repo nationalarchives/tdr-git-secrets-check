@@ -2,7 +2,7 @@
 
 This repository is a Jenkinsfile which periodically runs git secrets against a test file. The test file contains 3 fake secrets.
 
-* A fake AWS account number
+* A fake AWS access key
 * A fake AWS secret key
 * A public AWS account number
 
