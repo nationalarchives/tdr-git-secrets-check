@@ -20,10 +20,8 @@ pipeline {
   }
   post {
     failure {
-      node('master') {
-        script {
-          tdr.postToDaTdrSlackChannel(colour: "danger", message: "*The git secrets check on Jenkins has failed.* \n${env.BUILD_URL}")
-        }
+      script {
+        tdr.postToDaTdrSlackChannel(colour: "danger", message: "*The git secrets check on Jenkins has failed.* \n${env.BUILD_URL}")
       }
     }
   }
